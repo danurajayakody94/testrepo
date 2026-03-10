@@ -1,0 +1,479 @@
+@media (min-width: 992px) {
+  body .page-columns {
+    display: block;
+  }
+}
+
+
+/* Typography and Colors */
+:root {
+    --primary-yellow: #fdc435;
+    --text-dark: #212529;
+    --text-gray: #6c757d;
+    --bg-white: #ffffff;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    background: var(--bg-white) !important;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color: var(--text-dark) !important;
+  }
+  
+  /* Hero Section Layout (Home Page) */
+  .hero-container {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding-top: 50px;
+  }
+  
+  .hero-text {
+    flex: 1;
+    padding: 5% 10%;
+    z-index: 2;
+  }
+  
+  .hero-role {
+    color: var(--primary-yellow);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+  
+  .hero-desc {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 400px;
+  }
+  
+  /* Buttons */
+  .btn-custom-primary {
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    margin-right: 15px;
+  }
+  
+  .btn-custom-secondary {
+    background-color: transparent;
+    color: var(--text-dark);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid var(--text-dark);
+  }
+  
+  /* Hero Image & Yellow Background */
+  .hero-image-wrapper {
+    flex: 1;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  /* Simulated wavy background using clip-path */
+  .yellow-blob {
+    position: absolute;
+    right: 0;
+    top: -10%;
+    width: 120%;
+    height: 120%;
+    background-color: var(--primary-yellow);
+    clip-path: path('M0,300 C150,400 250,100 400,200 C550,300 600,0 800,0 L800,800 L0,800 Z');
+    z-index: 0;
+    border-bottom-left-radius: 50%;
+  }
+
+  .yellow-blob img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* .hero-img {
+    z-index: 1;
+    max-width: 80%;
+    height: auto;
+  } */
+  
+
+  /* Resume Specific Layout */
+.resume-container {
+  /* width: calc(100% - 375px); */
+  margin: 40px 50px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #F4F2F0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* max-width: 1000px;
+  margin: 0 auto; */
+}
+
+.resume-main {
+  padding: 40px;
+  background-color: #F4F2F0;
+}
+
+.resume-sidebar {
+  padding: 40px;
+  background-color: var(--primary-yellow); /* Sage green sidebar */
+  /* #C2D6CE */
+}
+
+/* Typography for Resume */
+.name-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #4A4341;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  color: var(--primary-yellow); /* Darker peach */
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.job-role {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+.job-dates {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
+/* Project Page Styles */
+.page-title {
+  margin: 40px 50px;
+  text-align: center;
+}
+
+.page-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #F7C548;
+  margin: 10px auto;
+}
+
+/* Project Cards Layout */
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.project-card {
+  display: flex;
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  height: 350px;
+}
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-text {
+  flex: 1;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-text h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.project-text p {
+  color: #888;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+.project-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Button Styling */
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.85rem;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Contact Page style */
+
+.banana-title {
+  color: var(--primary-yellow);
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.btn-yellow {
+  background-color: var(--primary-yellow);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-yellow:hover {
+  opacity: 0.8;
+  color: white;
+}
+
+/* Contact Page Specific Layout */
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px;
+}
+
+.contact-image img {
+  max-width: 400px;
+  height: auto;
+}
+
+.contact-form {
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-subtitle {
+  color: var(--text-light);
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* Form Inputs */
+.form-control {
+  width: 100%;
+  background-color: var(--bg-input);
+  border: none;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.form-control::placeholder {
+  color: #a0a0a0;
+}
+
+textarea.form-control {
+  height: 150px;
+  resize: none;
+}
+
+.submit-container {
+  text-align: right;
+}
+
+
+
+
+
+/* djjfls */
+
+.page-layout-article,
+.page-layout-full,
+#quarto-content,
+.content,
+main.content {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.resume-page {
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  grid-template-columns: 2rem 1fr 2rem;
+  gap: 0;
+}
+
+.resume-wrapper {
+  grid-column: 2;
+  width: 100%;
+  max-width: 100%;
+}
+
+.resume-panel {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+}
+
+.level3{
+  padding: 0 30px;
+}
+
+/* Skills Page Styles */
+
+/* Skills Page Specific UI */
+.features-section {
+  padding: 40px 0;
+}
+
+.feature-badge {
+  background-color: #f7b731;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.features-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.features-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.highlight-text {
+  color: #f7b731;
+  border: 1px solid #f7b731;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+.features-desc {
+  max-width: 300px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.feature-card {
+  border: 1px solid #f7b731;
+  border-radius: 8px;
+  padding: 30px 20px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(247, 183, 49, 0.2);
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.icon-box {
+  background-color: #f7b731;
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icon-box img {
+  width: 40px;
+  height: 40px;
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
